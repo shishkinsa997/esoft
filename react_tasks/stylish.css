@@ -1,0 +1,67 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+.dynamic-text {
+    font-size: 4em;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+}
+.interactive-letter {
+    display: inline-block;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+.button {
+    background-color: rgba(108, 117, 125, 0.8); /* Gray with transparency */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.534);
+    transition: background-color 0.3s, box-shadow 0.3s, opacity 0.3s;
+}
+.button:hover {
+    background-color: rgba(90, 98, 104, 0.8); /* Darker gray with transparency */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    opacity: 1;
+}
+.section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    opacity: 0;
+}
+.active {
+    max-height: 500px; /* Adjust based on your content */
+    opacity: 1;
+}
+.contact-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.contact-icons a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.contact-icons a:hover {
+    color: #0056b3;
+}

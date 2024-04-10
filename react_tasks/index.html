@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content=""> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylish.css">
+    <title>Сергей Шишкин</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <title>Сергей Шишкин</title>
+</head>
+<body>
+    <div class="container">
+        <div class="dynamic-text">
+            <span class="interactive-letter">С</span>
+            <span class="interactive-letter">е</span>
+            <span class="interactive-letter">р</span>
+            <span class="interactive-letter">г</span>
+            <span class="interactive-letter">е</span>
+            <span class="interactive-letter">й</span>
+            <span class="interactive-letter">&nbsp;</span>
+            <span class="interactive-letter">Ш</span>
+            <span class="interactive-letter">и</span>
+            <span class="interactive-letter">ш</span>
+            <span class="interactive-letter">к</span>
+            <span class="interactive-letter">и</span>
+            <span class="interactive-letter">н</span>
+        </div>
+        <div class="buttons-container">
+            <button class="button" onclick="toggleSection('about')"><i class="fas fa-info-circle"></i> About</button>
+            <button class="button" onclick="toggleSection('contact')"><i class="fas fa-envelope"></i> Contact</button>
+        </div>
+        <div id="about" class="section">
+            <h2>About Us</h2>
+            <p>Genius, Billionaire, Playboy, Philanthropist</p>
+            <ul>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+                <li>Fourth</li>
+            </ul>
+        </div>
+        <div id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div class="contact-icons">
+                <a href="mailto:shishkinsa1997@gmail.com"><i class="fas fa-envelope"></i> shishkinsa1997@gmail.com</a>
+                <a href="https://t.me/batmanpooop"><i class="fab fa-telegram-plane"></i> @batmanpooop</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const isActive = section.classList.contains('active');
+            document.querySelectorAll('.section').forEach(s => {
+                s.classList.remove('active');
+                s.style.maxHeight = null;
+            });
+            if (!isActive) {
+                section.classList.add('active');
+            }
+        }
+
+        document.querySelectorAll('.interactive-letter').forEach(letter => {
+            letter.addEventListener('mouseenter', function(e) {
+                const dx = (Math.random() - 0.5) * 100;
+                const dy = (Math.random() - 0.5) * 100;
+                letter.style.transform = `translate(${dx}px, ${dy}px)`;
+                setTimeout(() => {
+                    letter.style.transform = 'translate(0px, 0px)';
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
