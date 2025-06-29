@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-text on feature/imagesAndText changed 
-=======
-text on feature/conflict
->>>>>>> feature/conflict
