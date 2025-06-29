@@ -1,5 +1,4 @@
 // import { useState } from 'react'
-import React from 'react';
 import Chips from "../components/Chips";
 
 function Section() {
@@ -14,7 +13,7 @@ function Section() {
                 section.classList.add('active');
             }
         }
-        
+
 return (
     <div className="container">
         <div className="buttons-container">
@@ -34,6 +33,7 @@ return (
             <Chips label="Python"/>
             <Chips label="Git System"/>
             <Chips label="Java Script"/>
+            <Chips label="HTML / CSS"/>
             </span>
             <h2>Future competencies</h2>
             <div>
@@ -49,7 +49,7 @@ return (
                     <Chips label="AI engineer"/>
                     <Chips label="Data analyst"/>
                     <Chips label="DevOps"/>
-                    <Chips label="Machine Learning"/>
+                    <Chips label="LLM"/>
                     <Chips label="Maths"/>
                 </span>
             </div>

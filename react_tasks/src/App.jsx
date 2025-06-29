@@ -1,4 +1,3 @@
-import React from "react";
 import Photo from "./components/Photo";
 import Name from "./components/Name";
 import Section from "./components/Section";
